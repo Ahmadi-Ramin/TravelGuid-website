@@ -53,17 +53,22 @@ const ListingModal = ({
         }
     }, [errors])
 
+    // useEffect(() => {
+    //     reset({ ...listing })
+    // }, [
+    //     listing?.name,
+    //     listing?.desc,
+    //     listing?.beds,
+    //     listing?.type,
+    //     listing?.hasFreeWifi,
+    //     listing?.location,
+    //     listing?.pricePerNight
+    // ])
     useEffect(() => {
-        reset({ ...listing })
-    }, [
-        listing?.name,
-        listing?.desc,
-        listing?.beds,
-        listing?.type,
-        listing?.hasFreeWifi,
-        listing?.location,
-        listing?.pricePerNight
-    ])
+        if (listing) {
+          reset({ ...listing });
+        }
+      }, [listing, reset]); // ✅ Fix: Added `listing` and `reset` as dependencies
 
     const handleImage = (e) => {
         setImages(prev => {

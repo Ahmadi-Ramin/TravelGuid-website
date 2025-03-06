@@ -46,6 +46,7 @@ const SignUp = () => {
     <div className="relative h-screen w-full">
       <div className="relative h-full w-full">
         <Image
+          alt='image'
           src={Dubai}
           className="brightness-50 h-full w-full object-cover"
         />

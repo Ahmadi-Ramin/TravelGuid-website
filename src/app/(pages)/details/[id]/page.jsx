@@ -67,6 +67,7 @@ const HotelDetails = (ctx) => {
                 {listing?.imageUrls?.map((imageUrl) => (
                   <swiper-slide key={imageUrl}>
                     <Image
+                      alt='image'
                       className="h-[750px] w-full object-cover rounded-lg"
                       height="750"
                       width="750"

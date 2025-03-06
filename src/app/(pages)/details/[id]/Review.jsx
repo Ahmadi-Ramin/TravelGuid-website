@@ -12,6 +12,7 @@ const Review = ({
         <div className="w-full flex gap-4">
             <div className="w-14 h-14">
                 <Image
+                    alt='image'
                     height="56"
                     width="56"
                     className="w-full h-full object-cover rounded-full"
